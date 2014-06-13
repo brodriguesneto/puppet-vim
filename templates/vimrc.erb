@@ -1,0 +1,11 @@
+" Puppet template file
+" Do not edit
+
+<%= "runtime! debian.vim" if @operatingsystem == 'Ubuntu' %>
+
+<%= "syntax on" if @syntax == true %>
+
+<%= "set background=#{@background}" if @background != nil %>
+<% @options.each do |opt| %>
+set <%= opt %>
+<% end %>
