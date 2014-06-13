@@ -2,7 +2,7 @@
 class vim::config {
   file { $vim::params::vimrc:
     ensure  => $vim::file_ensure,
-    content => template('vim/vimrc.erb'),
+    content => template("${module_name}/vimrc.erb"),
     require => Class['vim::install']
   }
 }
