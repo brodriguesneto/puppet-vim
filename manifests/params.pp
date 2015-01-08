@@ -3,7 +3,7 @@ class vim::params {
   case $::operatingsystem {
     'Ubuntu' : {
       case $::lsbdistrelease {
-        /(12.04|14.04)/ : {
+        /(12.04|14.04|14.10)/ : {
           $package     = 'vim'
           $vimrc       = '/etc/vim/vimrc'
           $background  = 'dark'
